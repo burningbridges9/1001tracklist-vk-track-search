@@ -1,0 +1,15 @@
+# Build artifacts
+dist/
+
+# Installed test dependencies (jsdom) and pnpm stores
+test/.deps/node_modules/
+test/.deps/.pnpm-store/
+.pnpm-store/
+node_modules/
+
+# Local research of 1001tracklists markup: raw HTML snapshots and helper scripts
+_ref/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

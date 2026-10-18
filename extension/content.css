@@ -1,0 +1,62 @@
+/* Кнопка поиска трека в VK, которая добавляется на 1001Tracklists. */
+
+a.tl2vk-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0 0 0 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #8b98a5 !important;
+  font: inherit;
+  line-height: 1;
+  vertical-align: -3px;
+  text-decoration: none !important;
+  cursor: pointer;
+  flex: none;
+  opacity: 0.75;
+  position: relative;
+  z-index: 2;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+a.tl2vk-btn > svg {
+  display: block;
+  pointer-events: none;
+}
+
+/* 1001Tracklists — светлая тема; акцент берём из её же палитры (#1090D0). */
+a.tl2vk-btn:hover,
+a.tl2vk-btn:focus-visible {
+  opacity: 1;
+  color: #1090d0 !important;
+  background: rgba(16, 144, 208, 0.12);
+}
+
+a.tl2vk-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 144, 208, 0.45);
+}
+
+a.tl2vk-btn:active {
+  opacity: 0.85;
+}
+
+/* У машапа и у строк с длинной подписью кнопка не должна раздувать строку. */
+.mashupTrack a.tl2vk-btn,
+.bootleg a.tl2vk-btn {
+  vertical-align: -2px;
+}
+
+html.tl2vk-disabled a.tl2vk-btn {
+  display: none !important;
+}
